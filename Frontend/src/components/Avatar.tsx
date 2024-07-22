@@ -1,7 +1,7 @@
 import { useAppDispatch } from "@/hooks/redux.hook";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { logout } from "@/redux/state/user/user.slice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Avatar() {
   const dispatch = useAppDispatch();
@@ -35,6 +35,14 @@ function Avatar() {
           "mt-2 border border-slate-100 w-[100px] rounded-md bg-white p-2"
         }
       >
+        <MenuItem>
+          <Link
+            to={"/dashboard"}
+            className="w-full flex   items-center gap-1 py-1 text-sm rounded-md hover:bg-slate-50"
+          >
+            Dashboard
+          </Link>
+        </MenuItem>
         <MenuItem>
           <button
             className="w-full flex   items-center gap-1 py-1 text-sm rounded-md hover:bg-slate-50"
